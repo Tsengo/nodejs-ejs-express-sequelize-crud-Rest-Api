@@ -1,0 +1,12 @@
+<ul class="flex self-center flex-row gap-6 w-fit mx-auto">
+    <li> <a href="/<%= clientName ? `?clientName=${clientName}` : ''%>">main</a> </li>
+    <li> <a href="/cart<%= clientName ? `?clientName=${clientName}` : ''%>">carts</a> </li>
+    <% if(clientName) { %>
+        <%= clientName %>
+        <li> <a href="/">sign out</a> </li>
+        <% } else { %>
+            <li> <a href="/client-login<%= clientName ? `?clientName=${clientName}` : ''%>">login</a> </li>
+            <li> <a href="/client-register<%= clientName ? `?clientName=${clientName}` : ''%>">register</a> </li>
+
+    <% } %>
+</ul>

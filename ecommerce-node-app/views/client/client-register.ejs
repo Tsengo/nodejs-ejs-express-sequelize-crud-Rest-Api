@@ -1,0 +1,27 @@
+<%- include('../includes/head.ejs') %>
+
+</head>
+<body class="flex flex-col bg-gradient-to-r from-violet-500 to-fuchsia-500">
+    <a href="/"> < </a>
+    <section class="clientRegisterForm">       
+        <form action="/client-register" method="post" class="client-form flex flex-col w-5/12 gap-2 p-10 rounded-lg shadow-2xl my-28 bg-zinc-100">
+            <div class="flex justify-center w-full">
+                <div><a class="<%= path === '/client-register' ? 'active' : '' %>" href="/client-register">Register</a> | <a href="/client-login">Log In</a></div>
+            </div>
+            <div class="flex flex-col gap-2">
+                <label for="name" >Full Name</label>
+                <div class="flex justify-between">
+                    <input type="text" name="firstName" class="w-[49%] rounded-lg outline-none p-1 pl-3 bg-zinc-300">
+                    <input type="text" name="lastName" class="w-[49%] rounded-lg outline-none p-1 pl-3 bg-zinc-300">
+                </div>
+            </div>
+            <label for="name">Email</label>
+            <input type="email" name="email" class="p-1 pl-3 rounded-lg outline-none bg-zinc-300">
+            <label for="name">Password</label>
+            <input type="password" name="password" class="p-1 pl-3 rounded-lg outline-none bg-zinc-300">
+
+
+    <%- include('../includes/regLogBot.ejs') %>
+    </section>
+
+<%- include('../includes/end.ejs') %>

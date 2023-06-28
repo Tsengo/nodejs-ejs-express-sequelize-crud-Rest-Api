@@ -1,0 +1,20 @@
+<%- include('../includes/head.ejs') %>
+</head>
+<body class="flex justify-center bg-gradient-to-r from-violet-500 to-fuchsia-500">
+    <form action="" method="post" class="flex flex-col w-5/12 gap-2 p-10 rounded-lg shadow-2xl my-28 bg-zinc-100">
+        <div class="flex justify-center w-full">
+            <div><a href="/register-panel">Register</a> | <a class="<%= path === '/login' ? 'active' : '' %>" href="/login">Log In</a></div>
+        </div>
+
+        <label for="name">Organization</label>
+        <input type="text" name="orgName" class="p-1 pl-3 rounded-lg outline-none bg-zinc-300">
+
+        <label for="name">Email</label>
+        <input type="text" name="email" class="p-1 pl-3 rounded-lg outline-none bg-zinc-300">
+        
+        <label for="name">Password</label>
+        <input type="text" name="password" class="p-1 pl-3 rounded-lg outline-none bg-zinc-300">
+
+        <%- include('../includes/regLogBot.ejs') %>
+      
+<%- include('../includes/end.ejs') %>

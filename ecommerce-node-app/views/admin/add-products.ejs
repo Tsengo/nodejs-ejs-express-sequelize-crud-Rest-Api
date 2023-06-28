@@ -1,0 +1,33 @@
+<%- include('../includes/head.ejs') %>
+
+</head>
+<body>
+
+<%- include('../includes/admin-panel-navigation.ejs') %>
+
+    <main >
+        <form action="" method="post" enctype="multipart/form-data" class="flex flex-col w-72 gap-6 form-for-add-products">
+            <div>
+                <label for="">Image :</label>
+                <input type="file" name="image" class="custom-file-input" id="imageInputAdmin" required>
+            </div>
+            <div>
+                <label for="">Product Name :</label>
+                <input type="text" name="productName" id="productName" required>
+            </div>
+            <div>
+                <label for="">Product Description :</label>
+                <input type="text" name="productDescription" id="productDescription" required>
+            </div>
+            <div>
+                <label for="">Product Price :</label>
+                <input type="number" name="productPrice" min="0" id="productPrice" required>
+            </div>
+            <div class="w-full btn-submit">
+                <button type="submit" class="p-2 px-10 w-fit bg-violet-500 rounded-2xl text-zinc-50" id="adminAddProductBtn" >submit</button>
+            </div>
+        </form>
+    </main>
+
+      
+<%- include('../includes/end.ejs') %>

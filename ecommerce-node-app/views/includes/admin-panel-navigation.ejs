@@ -1,0 +1,20 @@
+<header class="px-5 py-10 ">
+    <div class="flex flex-col gap-3">
+        <p class="cursor-pointer name-of-org "><%= orgName %></p>
+        <div class="pl-3"> 
+            <ul class="org-name">
+                <li> <a href="#">settings</a> </li>
+                <li> <a href="/login">log out</a> </li>
+            </ul>
+        </div>
+
+        <ul class="flex flex-col gap-3 menu">        
+            <li class="<%= path === '/dashboard' ? 'active-for-nav' : '' %>"> <a href="/dashboard<%= orgName ? `?orgName=${orgName}` : ''%>">Dashboard</a> </li>
+            <li class="drop-product-movements" > 
+                <a href="/products<%= orgName ? `?orgName=${orgName}` : ''%>" class="flex flex-row gap-2 <%= path === '/products' || path === '/add-products' || path === '/edit-products' ? 'active-for-nav' : '' %>"> Products </a>
+            </li>
+            <li class="<%= path === '/orders' ? 'active-for-nav' : '' %>"> <a href="/orders<%= orgName ? `?orgName=${orgName}` : ''%>">Orders</a> </li>
+            <li class="<%= path === '/customers' ? 'active-for-nav' : '' %>"> <a href="/customers<%= orgName ? `?orgName=${orgName}` : ''%>">Customers</a> </li>
+        </ul>
+    </div>
+</header>
